@@ -2,17 +2,15 @@ import streamlit as st              # FrameWork dashboard
 import pandas as pd                 # Manipulacao de dataframes
 import plotly.express as px         # Visualizacao
 import plotly.graph_objects as go   # Visualizacao
-from PIL import Image               # Foto Perfil
 
 ferramentas = {'Skill':['Power BI', 'Python','SQL','R', 'PL/SQL', 'Outros'], 'Nível':[10,9,9,8,7,6]}
 df_skills = pd.DataFrame.from_dict(ferramentas)
 print(df_skills)
 
 # ----------------------- Diretorios --------------------------#
-current_dir = Path(__file__).parent if '__file__' in locals() else Path.cwd()
-css_dir = current_dir / 'styles' / 'main.css'
-cv_file = current_dir / 'docs' / 'cv.pdf'
-foto_perfil = current_dir / 'docs' / 'foto_perfil.png'
+css_dir = './styles/main.css'
+cv_file = './docs/cv.pdf'
+foto_perfil = './docs/foto_perfil.png'
 
 # ----------------------- Infos Basicas --------------------------#
 
@@ -48,13 +46,13 @@ with open(css_dir) as f:
     st.markdown('<style>{}</style?'.format(f.read()),unsafe_allow_html=True)
 with open(cv_file,'rb') as pdf_file:
     PDFbyte = pdf_file.read()
-foto = Image.open(foto_perfil)
+
 
 #---------------- Primeira Secao: foto, botoes downloads -----------------#
 c1,c2 = st.columns(2, gap='small')
 
 with c1:
-    st.image(foto, width=230)
+    st.image(foto_perfil, width=230)
 
 with c2:
     st.title(nome)
@@ -63,7 +61,7 @@ with c2:
     st.download_button(
         label = 'Download Currículo',
         data = PDFbyte,
-        file_name=cv_file.name,
+        file_name='Currículo-Victor',
         mime='application/octet-stream'
     )
 
