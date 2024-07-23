@@ -2,10 +2,7 @@ import streamlit as st              # FrameWork dashboard
 import pandas as pd                 # Manipulacao de dataframes
 import plotly.express as px         # Visualizacao
 import plotly.graph_objects as go   # Visualizacao
-import datetime                     # Horario ultima versao
 from PIL import Image               # Foto Perfil
-from pathlib import Path            # diretorio arquivos
-
 
 ferramentas = {'Skill':['Power BI', 'Python','SQL','R', 'PL/SQL', 'Outros'], 'Nível':[10,9,9,8,7,6]}
 df_skills = pd.DataFrame.from_dict(ferramentas)
