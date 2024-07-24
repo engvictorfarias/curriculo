@@ -21,7 +21,7 @@ desc1 = '👨‍💻 Analista de Dados Sênior'
 desc2 = 'Apaixonado por dados e por resolver problemas!'
 email = 'victormatheus1995@gmail.com'
 redes = {
-    'LinkedIn': 'https://linkedin.com/in/engvictorfarias/',
+    'LinkedIn': 'https://www.linkedin.com/in/eng-victor-farias/',
     'GitHub': 'https://engvictorfarias.github.io/',
     'Kaggle': 'https://www.kaggle.com/engvictorfarias',
     'Instagram': 'https://www.instagram.com/engvictorfarias'
@@ -81,9 +81,9 @@ st.write('---')
 st.write('''
 - ✅ +4 anos de experiência com Power BI, Python e SQL
 - ✅ +5 anos manipulando dados em Excel (dinâmica, Power Query, VBA ...)
-- ✅ Especialização em Data Science (Data Science Academy - nov/21 a nov/23) 
-- ✅ Pós-Graduado em BI
-- ✅ Engenheiro Mecânico - UFRN                         
+- 🎓Especialização em Data Science (Data Science Academy - nov/21 a nov/23) 
+- 🎓 Pós-Graduado em BI
+- 🎓 Engenheiro Mecânico - UFRN                         
 ''')
 
 # ---------------------------- Skills ------------------------------------#
@@ -96,7 +96,8 @@ st.write('''
 - 📊 Visualização: Power BI, Python, R, Metabase, Looker, Excel
 - 🎲 Banco de Dados: Oracle, Postgres, MySQL, SQL Server
 - 🤓 Data Science: Modelos de aprendizado supervisionado e não supervisionado 
-    (python/R/Apache Spark)             
+    (python/R/Apache Spark)
+- 💎Ferramenta ETL: Pentaho             
 ''')
 st.write('\n')
 fig_bar = go.Figure()
