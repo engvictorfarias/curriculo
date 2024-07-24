@@ -9,7 +9,7 @@ print(df_skills)
 
 # ----------------------- Diretorios --------------------------#
 css_dir = './styles/main.css'
-cv_file = './docs/cv.pdf'
+#cv_file = './docs/cv.pdf'
 foto_perfil = './docs/foto_perfil.png'
 
 # ----------------------- Infos Basicas --------------------------#
@@ -44,8 +44,8 @@ st.set_page_config(page_title = titulo_cv, page_icon = icone_pagina)
 
 with open(css_dir) as f:
     st.markdown('<style>{}</style?'.format(f.read()),unsafe_allow_html=True)
-with open(cv_file,'rb') as pdf_file:
-    PDFbyte = pdf_file.read()
+#with open(cv_file,'rb') as pdf_file:
+#    PDFbyte = pdf_file.read()
 
 
 #---------------- Primeira Secao: foto, botoes downloads -----------------#
@@ -58,12 +58,13 @@ with c2:
     st.title(nome)
     st.write(desc1)
     st.write(desc2)
+    _ = '''
     st.download_button(
         label = 'Download Currículo',
         data = PDFbyte,
         file_name='Currículo-Victor',
         mime='application/octet-stream'
-    )
+    )'''
 
     st.write('📩', email)
 
