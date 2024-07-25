@@ -2,6 +2,8 @@ import streamlit as st              # FrameWork dashboard
 import pandas as pd                 # Manipulacao de dataframes
 import plotly.express as px         # Visualizacao
 import plotly.graph_objects as go   # Visualizacao
+import time
+import random
 
 ferramentas = {'Skill':['Power BI', 'Python','SQL','R', 'PL/SQL', 'Outros'], 'Nível':[10,9,9,8,7,6]}
 df_skills = pd.DataFrame.from_dict(ferramentas)
@@ -74,9 +76,8 @@ cols = st.columns(len(redes))
 for index, (plataform, link) in enumerate(redes.items()):
     cols[index].write(f'[{plataform}]({link})')
 st.write('---')
-# ---------------------------- Experiência e Qualificações ------------------------------------#
 
-st.write('#')
+# ---------------------------- Experiência e Qualificações ------------------------------------#
 st.subheader('Experiência e Qualificações')
 st.write('---')
 st.write('''
@@ -88,8 +89,6 @@ st.write('''
 ''')
 
 # ---------------------------- Skills ------------------------------------#
-
-st.write('#')
 st.subheader('Hard Skills')
 st.write('---')
 st.write('''
@@ -151,7 +150,7 @@ st.write('''
 ''')
          
 st.write('\n')
-st.write('**- Freelancer PJ (Desenvolvimento de BIs**)')
+st.write('**🏁 Freelancer PJ (Desenvolvimento de BIs**)')
 st.write('09/2023 - 05/2024')
 st.write('''
 - 📌 Construção e manutenção de Dashboards no Power BI
@@ -159,11 +158,11 @@ st.write('''
 ''')
 
 st.write('\n')
-st.write('**- Analista de Dados Pleno | Unimed Natal**')
+st.write('**🏁 Analista de Dados Pleno | Unimed Natal**')
 st.write('01/2022 - 09/2023')
 
 st.write('\n')
-st.write('**- Programador Digital Junior | Ânima Educação**')
+st.write('**🏁 Programador Digital Junior | Ânima Educação**')
 st.write('10/2021 - 12/2021')
 st.write('''
 - 📌 Criação e manutenção de dashboards no Power BI
@@ -171,7 +170,7 @@ st.write('''
 ''')
 
 st.write('\n')
-st.write('**- ... outros**')
+st.write('**🏁 ... outros**')
 
 # ---------------------------- Projetos ------------------------------------#
 
@@ -181,3 +180,51 @@ st.write('---')
 
 for projeto, link in projetos.items():
     st.write(f'[{projeto}]({link})')
+
+
+st.write('---')
+# ----------------------------------- Victor GPT ----------------------------------------------#
+
+def response_generator():
+    response = random.choice(
+        [
+            "Olá, jovem Padawan! Como posso ajudá-lo?",
+            "Oi, Humano 🤖. Você tem alguma dúvida?",
+            "Posso ajudar?",
+        ]
+    )
+    for word in response.split():
+        yield word + " "
+        time.sleep(0.05)
+
+
+st.title("Victor GPT ")
+st.write('---')
+st.write('Exemplos de prompts: (sinta-se livre)')
+st.write('\n')         
+st.write('''
+- Por que contratar um analista de dados?
+- Como automatizar as tarefas do meu negócio com programação?         
+''')
+# Initialize chat history
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+# Display chat messages from history on app rerun
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
+
+# Accept user input
+if prompt := st.chat_input("Mensagem, dúvida ou curiosidade. Ex: Por que contratar um analista de dados?"):
+    # Add user message to chat history
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    # Display user message in chat message container
+    with st.chat_message("user"):
+        st.markdown(prompt)
+
+    # Display assistant response in chat message container
+    with st.chat_message("assistant"):
+        response = st.write_stream(response_generator())
+    # Add assistant response to chat history
+    st.session_state.messages.append({"role": "assistant", "content": response})
