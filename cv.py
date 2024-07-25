@@ -142,10 +142,21 @@ st.write('---')
 
 st.write('**🥇 Analista de Dados Sênior | Unimed Natal**')
 st.write('09/2023 - atualmente')
+st.write('''
+- 📌 Desenvolvimento colaborativo de Dashboards no Power BI, com a análise de indicadores estratégicos da empresa. Aproximação com o usuário final, com o objetivo de entender as necessidades da análise.
+- 📌 Coleta, extração e transformação de diferentes fontes para consolidação. Foco na automação do processo para atualizações programadas.
+- 📌 Administração do Portal no Power BI Serviços: configuração de gateway, logins, relatórios e workspaces, etc.
+- 📌 Extração de dados via SQL para atender às áreas de negócio e construção de Queries para relatórios do ERP.
+- 📌 Criação de Views, Functions, Procedures e manutenção do DataWarehouse (PL/SQL)
+''')
          
 st.write('\n')
 st.write('**- Freelancer PJ (Desenvolvimento de BIs**)')
 st.write('09/2023 - 05/2024')
+st.write('''
+- 📌 Construção e manutenção de Dashboards no Power BI
+- 📌 Criação e manutenção de Views                  
+''')
 
 st.write('\n')
 st.write('**- Analista de Dados Pleno | Unimed Natal**')
@@ -154,6 +165,10 @@ st.write('01/2022 - 09/2023')
 st.write('\n')
 st.write('**- Programador Digital Junior | Ânima Educação**')
 st.write('10/2021 - 12/2021')
+st.write('''
+- 📌 Criação e manutenção de dashboards no Power BI
+- 📌 Consolidação e manipulação de dados em Excel         
+''')
 
 st.write('\n')
 st.write('**- ... outros**')
